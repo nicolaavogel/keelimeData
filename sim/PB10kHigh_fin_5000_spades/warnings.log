@@ -1,0 +1,5 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:04.861     1M / 113M  WARN    General                 (simplification.cpp        : 517)   The determined erroneous connection coverage threshold may be determined improperly
+ * 0:00:05.095     1M / 416M  WARN    General                 (kmer_coverage_model.cpp   : 367)   Failed to determine erroneous kmer threshold. Threshold set to: 6
+======= Warnings saved to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10kHigh_fin_5000_spades/warnings.log

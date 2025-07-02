@@ -1,0 +1,4 @@
+- "number": !!int "1"
+  "single reads":
+  - "/projects/wintherpedersen/people/bfj994/keelime/data/PB50myaHigh_fin_500.fq.gz"
+  "type": "single"

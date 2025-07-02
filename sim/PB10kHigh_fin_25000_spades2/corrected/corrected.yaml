@@ -1,0 +1,4 @@
+- "number": !!int "1"
+  "single reads":
+  - "/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10kHigh_fin_25000_spades2/corrected/PB10kHigh_fin_25000.fq00.0_0.cor.fastq.gz"
+  "type": "single"

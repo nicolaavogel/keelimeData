@@ -1,0 +1,148 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after:
+  - tmp/hammer_d_64emgs
+  - .bin_reads
+  - tmp/spades_1f9bk7wn
+  - configs
+  job_uuid: SPAdes_Before_start_OM3OUQNDO1JO3Q3YD52QZHE1TODPV0C9
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_QHUV270C58F7OMI30Q59CGDTS7NH9DC0
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_ldkog_8h
+  job_uuid: SPAdes_Read_error_correction_9E23NQ7KC2BMTSLC37HX4CDWYG6RF2T4
+  mpi_support: false
+  output_files:
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/corrected/corrected.yaml
+  path: /home/bfj994/miniconda3/envs/denovo/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /home/bfj994/miniconda3/envs/denovo/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /home/bfj994/miniconda3/envs/denovo/share/spades
+  - --max_threads
+  - '16'
+  - --output_dir
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_corrected_reads_compression_U38J4ZCG28AGHLWCRAEI2YL8X0YRD43V
+  mpi_support: false
+  output_files: []
+  path: /home/bfj994/miniconda3/envs/denovo/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_17P8LIYEO8DGBY1MVHP2GFARLI5Q6ZYM
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_7N1VY8KWP577HWCQP0FU197CYQMDF9OO
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/configs/config.info
+  config_dir: K21
+  del_after: []
+  job_uuid: hpcSPAdes_K21_8PJ3OFIRS8S7XQQDE8SO2L3TW1KEJAL7
+  mpi_support: true
+  output_files: []
+  path: /home/bfj994/miniconda3/envs/denovo/bin/{spades_core}
+  short_name: k21
+- STAGE: Copy files
+  args:
+  - /home/bfj994/miniconda3/envs/denovo/share/spades/spades_pipeline/scripts/copy_files.py
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/before_rr.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/before_rr.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/assembly_graph_after_simplification.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/assembly_graph_after_simplification.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/final_contigs.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/contigs.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/first_pe_contigs.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/first_pe_contigs.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/strain_graph.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/strain_graph.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/scaffolds.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/scaffolds.fasta
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/scaffolds.paths
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/scaffolds.paths
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/assembly_graph_with_scaffolds.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/assembly_graph_with_scaffolds.gfa
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/assembly_graph.fastg
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/assembly_graph.fastg
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/K21/final_contigs.paths
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_a_adzp06
+  job_uuid: SPAdes_Copy_files_ZFK5FNHAB2IFD05ZRNECC8MEZYUUDMF1
+  mpi_support: false
+  output_files: []
+  path: /home/bfj994/miniconda3/envs/denovo/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_GA0ZSB327RMW1Q8RLQSLBXMUCM4ZPHP0
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /home/bfj994/miniconda3/envs/denovo/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/scaffolds.fasta
+  - --misc_dir
+  - /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBHigh_fin_50000_spades/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_VR4ATDXGP0TPZKARN72J3W5DPSRDH7EV
+  mpi_support: false
+  output_files: []
+  path: /home/bfj994/miniconda3/envs/denovo/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_EJQXL48FSYG7QKIDED5O7XK5HZSP2BD0
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

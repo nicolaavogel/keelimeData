@@ -1,0 +1,4 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:05.458     1M / 1487M WARN    General                 (kmer_coverage_model.cpp   : 219)   Too many erroneous kmers, the estimates might be unreliable
+======= Warnings saved to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB5myaHigh_fin_25000_spades/warnings.log

@@ -1,0 +1,4 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:04.801     1M / 1061M WARN    General                 (simplification.cpp        : 517)   The determined erroneous connection coverage threshold may be determined improperly
+======= Warnings saved to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB500kHigh_fin_25000_spades/warnings.log

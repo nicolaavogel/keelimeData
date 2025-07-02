@@ -1,0 +1,234 @@
+Command line: /home/bfj994/miniconda3/envs/denovo/bin/spades.py	-s	/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz	-o	/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2	-k	21	
+
+System information:
+  SPAdes version: 4.2.0
+  Python version: 3.13.3
+  OS: Linux-4.18.0-553.40.1.el8_10.x86_64-x86_64-with-glibc2.28
+
+Output dir: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: single
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz']
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+  Assembly graph output will use GFA v1.2 format
+Other parameters:
+  Dir for temp files: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
+
+======= SPAdes pipeline started. Log can be found here: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/spades.log
+
+/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz: max reads length: 99
+
+Reads length: 99
+
+
+===== Before start started. 
+
+
+===== Read error correction started. 
+
+
+===== Read error correction started. 
+
+
+== Running: /home/bfj994/miniconda3/envs/denovo/bin/spades-hammer /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected/configs/config.info
+
+  0:00:00.000     1M / 18M   INFO    General                 (main.cpp                  :  76)   Starting BayesHammer, built from N/A, git revision N/A
+  0:00:00.058     1M / 18M   INFO    General                 (main.cpp                  :  77)   Loading config from "/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected/configs/config.info"
+  0:00:00.103     1M / 18M   INFO    General                 (main.cpp                  :  79)   Maximum # of threads to use (adjusted due to OMP capabilities): 16
+  0:00:00.103     1M / 18M   INFO    General                 (memory_limit.cpp          :  55)   Memory limit set to 250 Gb
+  0:00:00.103     1M / 18M   INFO    General                 (main.cpp                  :  87)   Trying to determine PHRED offset
+  0:00:00.104     1M / 18M   INFO    General                 (main.cpp                  :  93)   Determined value is 64
+  0:00:00.106     1M / 18M   INFO    General                 (hammer_tools.cpp          :  40)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.106     1M / 18M   INFO    General                 (main.cpp                  : 114)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.109     1M / 18M   INFO    General                 (kmer_index_builder.hpp    : 308)   Splitting kmer instances into 16 files using 16 threads. This might take a while.
+  0:00:00.136     1M / 18M   INFO    General                 (file_limit.hpp            :  43)   Open file limit set to 1024
+  0:00:00.136     1M / 18M   INFO    General                 (kmer_splitter.hpp         :  96)   Memory available for splitting buffers: 5.20833 Gb
+  0:00:00.136     1M / 18M   INFO    General                 (kmer_splitter.hpp         : 104)   Using cell size of 4194304
+  0:00:00.267  9217M / 9217M INFO   K-mer Splitting          (kmer_data.cpp             :  98)   Processing "/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz"
+  0:00:00.594  9217M / 9217M INFO   K-mer Splitting          (kmer_data.cpp             : 113)   Total 500 reads processed
+  0:00:00.601     1M / 525M  INFO    General                 (kmer_index_builder.hpp    : 314)   Starting k-mer counting.
+  0:00:00.695     1M / 525M  INFO    General                 (kmer_index_builder.hpp    : 325)   K-mer counting done. There are 17998 kmers in total.
+  0:00:00.698     1M / 525M  INFO   K-mer Index Building     (kmer_index_builder.hpp    : 460)   Building perfect hash indices
+  0:00:00.702     1M / 525M  INFO   K-mer Index Building     (kmer_index_builder.hpp    : 496)   Index built. Total 17998 kmers, 25328 bytes occupied (11.2581 bits per kmer).
+  0:00:00.702     1M / 525M  INFO   K-mer Counting           (kmer_data.cpp             : 355)   Arranging kmers in hash map order
+  0:00:00.737     1M / 525M  INFO    General                 (main.cpp                  : 149)   Clustering Hamming graph.
+  0:00:00.748     1M / 525M  INFO    General                 (main.cpp                  : 156)   Extracting clusters:
+  0:00:00.748     1M / 525M  INFO    General                 (concurrent_dsu.cpp        :  19)   Connecting to root
+  0:00:00.748     1M / 525M  INFO    General                 (concurrent_dsu.cpp        :  35)   Calculating counts
+  0:00:00.750     2M / 525M  INFO    General                 (concurrent_dsu.cpp        :  64)   Writing down entries
+  0:00:00.761     1M / 525M  INFO    General                 (main.cpp                  : 168)   Clustering done. Total clusters: 16960
+  0:00:00.761     1M / 525M  INFO   K-mer Counting           (kmer_data.cpp             : 372)   Collecting K-mer information, this takes a while.
+  0:00:00.761     1M / 525M  INFO   K-mer Counting           (kmer_data.cpp             : 378)   Processing "/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz"
+  0:00:00.763     1M / 525M  INFO   K-mer Counting           (kmer_data.cpp             : 385)   Collection done, postprocessing.
+  0:00:00.763     1M / 525M  INFO   K-mer Counting           (kmer_data.cpp             : 398)   There are 17998 kmers in total. Among them 13346 (74.1527%) are singletons.
+  0:00:00.763     1M / 525M  INFO    General                 (main.cpp                  : 174)   Subclustering Hamming graph
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 637)   Subclustering done. Total 0 non-read kmers were generated.
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 638)   Subclustering statistics:
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 639)     Total singleton hamming clusters: 15958. Among them 4070 (25.5044%) are good
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 640)     Total singleton subclusters: 0. Among them 0 (-nan%) are good
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 641)     Total non-singleton subcluster centers: 1002. Among them 234 (23.3533%) are good
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 642)     Average size of non-trivial subcluster: 2.03593 kmers
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 643)     Average number of sub-clusters per non-singleton cluster: 1
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 644)     Total solid k-mers: 4304
+  0:00:00.774     1M / 525M  INFO   Hamming Subclustering    (kmer_cluster.cpp          : 645)     Substitution probabilities: (      0.94209  0.000776277    0.0552709   0.00186306 )
+(   0.00145289     0.894977   0.00145289     0.102117 )
+(    0.0309278   0.00112057     0.966383    0.0015688 )
+(   0.00032911   0.00032911  0.000822774     0.998519 )
+  0:00:00.775     1M / 525M  INFO    General                 (main.cpp                  : 179)   Finished clustering.
+  0:00:00.775     1M / 525M  INFO    General                 (main.cpp                  : 198)   Starting solid k-mers expansion in 16 threads.
+  0:00:00.777     1M / 525M  INFO    General                 (main.cpp                  : 219)   Solid k-mers iteration 0 produced 128 new k-mers.
+  0:00:00.778     1M / 525M  INFO    General                 (main.cpp                  : 219)   Solid k-mers iteration 1 produced 0 new k-mers.
+  0:00:00.778     1M / 525M  INFO    General                 (main.cpp                  : 223)   Solid k-mers finalized
+  0:00:00.779     1M / 525M  INFO    General                 (hammer_tools.cpp          : 226)   Starting read correction in 16 threads.
+  0:00:00.779     1M / 525M  INFO    General                 (hammer_tools.cpp          : 270)   Correcting single reads: "/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_500.fq.gz"
+  0:00:00.828   174M / 525M  INFO    General                 (hammer_tools.cpp          : 131)   Prepared batch 0 of 500 reads.
+  0:00:00.829   174M / 525M  INFO    General                 (hammer_tools.cpp          : 136)   Processed batch 0
+  0:00:00.829   174M / 525M  INFO    General                 (hammer_tools.cpp          : 140)   Written batch 0
+  0:00:00.854     1M / 525M  INFO    General                 (hammer_tools.cpp          : 280)   Correction done. Changed 4 bases in 4 reads.
+  0:00:00.854     1M / 525M  INFO    General                 (hammer_tools.cpp          : 281)   Failed to correct 0 bases out of 21613.
+  0:00:00.854     1M / 525M  INFO    General                 (main.cpp                  : 256)   Saving corrected dataset description to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected/corrected.yaml
+  0:00:00.860     1M / 525M  INFO    General                 (main.cpp                  : 263)   All done. Exiting.
+
+===== Read error correction finished. 
+
+
+===== corrected reads compression started. 
+
+
+== Running: /home/bfj994/miniconda3/envs/denovo/bin/python3 /home/bfj994/miniconda3/envs/denovo/share/spades/spades_pipeline/scripts/compress_all.py --input_file /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected/corrected.yaml --ext_python_modules_home /home/bfj994/miniconda3/envs/denovo/share/spades --max_threads 16 --output_dir /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected --gzip_output
+
+== Compressing corrected reads (with pigz)
+== Files to compress: ['/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/corrected/PB10myaHigh_fin_500.fq00.0_0.cor.fastq']
+== Files compression is finished
+== Dataset yaml file is updated
+
+===== corrected reads compression finished. 
+
+
+===== Read error correction finished. 
+
+
+===== Assembling started. 
+
+
+===== K21 started. 
+
+
+== Running: /home/bfj994/miniconda3/envs/denovo/bin/spades-core /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/K21/configs/config.info
+
+  0:00:00.000     1M / 18M   INFO    General                 (main.cpp                  :  94)   Loaded config from "/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/K21/configs/config.info"
+  0:00:00.001     1M / 18M   INFO    General                 (memory_limit.cpp          :  55)   Memory limit set to 250 Gb
+  0:00:00.001     1M / 18M   INFO    General                 (main.cpp                  : 102)   Starting SPAdes, built from N/A, git revision N/A
+  0:00:00.002     1M / 18M   INFO    General                 (main.cpp                  : 103)   Maximum k-mer length: 128
+  0:00:00.002     1M / 18M   INFO    General                 (main.cpp                  : 104)   Assembling dataset ("/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/dataset.info") with K=21
+  0:00:00.002     1M / 18M   INFO    General                 (main.cpp                  : 105)   Maximum # of threads to use (adjusted due to OMP capabilities): 16
+  0:00:00.002     1M / 18M   INFO    General                 (pipeline.cpp              : 221)   SPAdes started
+  0:00:00.002     1M / 18M   INFO    General                 (pipeline.cpp              : 234)   Starting from stage: read_conversion
+  0:00:00.002     1M / 18M   INFO    General                 (pipeline.cpp              : 245)   Two-step repeat resolution disabled
+  0:00:00.002     1M / 18M   INFO   GraphCore                (graph_core.hpp            : 689)   Graph created, vertex min_id: 3, edge min_id: 3
+  0:00:00.002     1M / 18M   INFO   GraphCore                (graph_core.hpp            : 690)   Vertex size: 48, edge size: 40
+  0:00:00.002     1M / 18M   INFO    General                 (edge_index.hpp            : 132)   Size of edge index entries: 12/8
+  0:00:00.002     1M / 18M   INFO    General                 (pipeline.cpp              : 256)   Will need read mapping, kmer mapper will be attached
+  0:00:00.002     1M / 18M   INFO   StageManager             (stage.cpp                 : 212)   STAGE == Binary Read Conversion (id: read_conversion)
+  0:00:00.007     1M / 18M   INFO    General                 (read_converter.cpp        :  78)   Converting reads to binary format for library #0 (takes a while)
+  0:00:00.007     1M / 18M   INFO    General                 (read_converter.cpp        :  99)   Converting paired reads
+  0:00:00.016    29M / 38M   INFO    General                 (binary_converter.cpp      : 143)   0 reads written
+  0:00:00.018     1M / 38M   INFO    General                 (read_converter.cpp        : 113)   Converting single reads
+  0:00:00.026    40M / 50M   INFO    General                 (binary_converter.cpp      : 143)   310 reads written
+  0:00:00.027    27M / 50M   INFO    General                 (read_converter.cpp        : 119)   Converting merged reads
+  0:00:00.031    40M / 50M   INFO    General                 (binary_converter.cpp      : 143)   0 reads written
+  0:00:00.052     1M / 51M   INFO   StageManager             (stage.cpp                 : 212)   STAGE == de Bruijn graph construction (id: construction)
+  0:00:00.067     1M / 51M   INFO    General                 (construction.cpp          : 150)   Max read length 99
+  0:00:00.067     1M / 51M   INFO    General                 (construction.cpp          : 156)   Average read length 47.3968
+  0:00:00.067     1M / 51M   INFO    General                 (stage.cpp                 : 121)   PROCEDURE == k+1-mer counting (id: construction:kpomer_counting)
+  0:00:00.067     1M / 51M   INFO    General                 (kmer_index_builder.hpp    : 308)   Splitting kmer instances into 160 files using 16 threads. This might take a while.
+  0:00:00.293     1M / 51M   INFO    General                 (file_limit.hpp            :  43)   Open file limit set to 1024
+  0:00:00.293     1M / 51M   INFO    General                 (kmer_splitter.hpp         :  96)   Memory available for splitting buffers: 5.20833 Gb
+  0:00:00.293     1M / 51M   INFO    General                 (kmer_splitter.hpp         : 104)   Using cell size of 419430
+  0:00:03.273     1M / 5183M INFO    General                 (kmer_splitters.hpp        : 134)   Used 620 reads
+  0:00:03.279     1M / 5183M INFO    General                 (kmer_index_builder.hpp    : 314)   Starting k-mer counting.
+  0:00:04.631     1M / 5183M INFO    General                 (kmer_index_builder.hpp    : 325)   K-mer counting done. There are 5488 kmers in total.
+  0:00:04.631     1M / 5183M INFO    General                 (stage.cpp                 : 121)   PROCEDURE == Extension index construction (id: construction:extension_index_construction)
+  0:00:04.694     1M / 5183M INFO   K-mer Index Building     (kmer_index_builder.hpp    : 503)   Building kmer index
+  0:00:04.694     1M / 5183M INFO    General                 (kmer_index_builder.hpp    : 308)   Splitting kmer instances into 160 files using 16 threads. This might take a while.
+  0:00:04.947     2M / 5183M INFO    General                 (file_limit.hpp            :  43)   Open file limit set to 1024
+  0:00:04.947     2M / 5183M INFO    General                 (kmer_splitter.hpp         :  96)   Memory available for splitting buffers: 5.20831 Gb
+  0:00:04.947     2M / 5183M INFO    General                 (kmer_splitter.hpp         : 104)   Using cell size of 419430
+  0:00:07.574  9602M / 9602M INFO    General                 (kmer_splitters.hpp        : 197)   Processed 5488 kmers
+  0:00:07.575  9602M / 9602M INFO    General                 (kmer_splitters.hpp        : 202)   Used 5488 kmers.
+  0:00:07.577     2M / 5213M INFO    General                 (kmer_index_builder.hpp    : 314)   Starting k-mer counting.
+  0:00:09.057     2M / 5213M INFO    General                 (kmer_index_builder.hpp    : 325)   K-mer counting done. There are 5579 kmers in total.
+  0:00:09.057     2M / 5213M INFO   K-mer Index Building     (kmer_index_builder.hpp    : 460)   Building perfect hash indices
+  0:00:09.094     2M / 5213M INFO   K-mer Index Building     (kmer_index_builder.hpp    : 496)   Index built. Total 5579 kmers, 130128 bytes occupied (186.597 bits per kmer).
+  0:00:09.094     2M / 5213M INFO    General                 (kmer_index_builder.hpp    : 191)   Merging final buckets.
+  0:00:09.770     2M / 5213M INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build: 101)   Building k-mer extensions from k+1-mers
+  0:00:09.781     2M / 5213M INFO   DeBruijnExtensionIndexBu (kmer_extension_index_build: 106)   Building k-mer extensions from k+1-mers finished.
+  0:00:09.784     2M / 5213M INFO    General                 (stage.cpp                 : 121)   PROCEDURE == Condensing graph (id: construction:graph_condensing)
+  0:00:09.784     2M / 5213M INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 324)   Extracting unbranching paths
+  0:00:09.787     2M / 5213M INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 348)   Extracting unbranching paths finished. 286 sequences extracted
+  0:00:09.787     2M / 5213M INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 362)   Collecting perfect loops
+  0:00:09.788     2M / 5213M INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 395)   Collecting perfect loops finished. 0 loops collected
+  0:00:09.788     2M / 5213M INFO   DeBruijnGraphConstructor (debruijn_graph_constructor: 593)   Sorting edges...
+  0:00:09.788     2M / 5213M INFO   DeBruijnGraphConstructor (debruijn_graph_constructor: 598)   Edges sorted
+  0:00:09.788     2M / 5213M INFO    General                 (debruijn_graph_constructor: 511)   Total 572 edges to create
+  0:00:09.788     2M / 5213M INFO    General                 (debruijn_graph_constructor: 514)   Collecting link records
+  0:00:09.789     2M / 5213M INFO    General                 (debruijn_graph_constructor: 519)   Ordering link records
+  0:00:09.789     2M / 5213M INFO    General                 (debruijn_graph_constructor: 525)   Sorting done
+  0:00:09.789     2M / 5213M INFO    General                 (debruijn_graph_constructor: 538)   Sorting LinkRecords...
+  0:00:09.789     2M / 5213M INFO    General                 (debruijn_graph_constructor: 544)   LinkRecords sorted
+  0:00:09.789     2M / 5213M INFO    General                 (debruijn_graph_constructor: 546)   Total 377 vertices to create
+  0:00:09.790     2M / 5213M INFO    General                 (debruijn_graph_constructor: 549)   Connecting the graph
+  0:00:09.790     2M / 5213M INFO    General                 (stage.cpp                 : 121)   PROCEDURE == Filling coverage indices (PHM) (id: construction:coverage_filling_phm)
+  0:00:09.790     2M / 5213M INFO   K-mer Index Building     (kmer_index_builder.hpp    : 460)   Building perfect hash indices
+  0:00:09.819     2M / 5213M INFO   K-mer Index Building     (kmer_index_builder.hpp    : 496)   Index built. Total 5488 kmers, 130120 bytes occupied (189.679 bits per kmer).
+  0:00:09.821     2M / 5213M INFO    General                 (coverage_hash_map_builder.:  49)   Collecting k-mer coverage information from reads, this takes a while.
+  0:00:09.822     2M / 5213M INFO    General                 (construction.cpp          : 400)   Filling coverage and flanking coverage from PHM
+  0:00:10.101     1M / 5213M INFO   StageManager             (stage.cpp                 : 212)   STAGE == EC Threshold Finding (id: ec_threshold_finder)
+  0:00:10.101     1M / 5213M ERROR   General                 (kmer_coverage_model.cpp   : 188)   Invalid kmer coverage histogram, make sure that the coverage is indeed uniform
+=== Stack Trace ===
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x920f9) [0x5596e2c490f9]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x43d19a) [0x5596e2ff419a]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x37b320) [0x5596e2f32320]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x399686) [0x5596e2f50686]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x9e1e7) [0x5596e2c551e7]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x8b5e4) [0x5596e2c425e4]
+/lib64/libc.so.6(__libc_start_main+0xe5) [0x7f196294d7e5]
+/home/bfj994/miniconda3/envs/denovo/bin/spades-core(+0x9052a) [0x5596e2c4752a]
+
+
+== Error ==  system call for: "['/home/bfj994/miniconda3/envs/denovo/bin/spades-core', '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/K21/configs/config.info']" finished abnormally, OS return value: 21
+None
+
+In case you have troubles running SPAdes, you can report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+
+SPAdes log can be found here: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_500_spades2/spades.log
+
+Thank you for using SPAdes! If you use it in your research, please cite:
+
+  Prjibelski, A., Antipov, D., Meleshko, D., Lapidus, A. and Korobeynikov, A., 2020. Using SPAdes de novo assembler. Current protocols in bioinformatics, 70(1), p.e102.
+  doi.org/10.1002/cpbi.102
+

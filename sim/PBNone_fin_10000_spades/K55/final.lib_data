@@ -1,0 +1,34 @@
+Ú
+---
+max read length: 139
+nomerge max read length: 139
+average read length: 44.2617
+average coverage: 1.54071
+libraries:
+  - type:            single
+    number:          1
+    single reads:
+      - '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBNone_fin_10000_spades/corrected/PBNone_fin_10000.fq00.0_0.cor.fastq.gz'
+    data:
+      unmerged read length: 139
+      merged read length: 0
+      insert size mean: 0
+      insert size deviation: 0
+      insert size left quantile: 0
+      insert size right quantile: 0
+      insert size median: 0
+      insert size mad: 0
+      insert size distribution: {  }
+      pi threshold:    0
+      binary reads info:
+        binary converted: true
+        bin reads info file: '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBNone_fin_10000_spades/.bin_reads/INFO_0'
+        paired read prefix: '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBNone_fin_10000_spades/.bin_reads/paired_0'
+        merged read prefix: '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBNone_fin_10000_spades/.bin_reads/merged_0'
+        single read prefix: '/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PBNone_fin_10000_spades/.bin_reads/single_0'
+        chunk num:       16
+      single reads mapped: true
+      library index:   0
+      number of reads: 9730
+      total nucleotides: 430666
+...

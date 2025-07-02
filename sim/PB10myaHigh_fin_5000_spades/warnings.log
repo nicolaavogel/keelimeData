@@ -1,0 +1,5 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:04.788     1M / 68M   WARN    General                 (kmer_coverage_model.cpp   : 219)   Too many erroneous kmers, the estimates might be unreliable
+ * 0:00:04.834     1M / 68M   WARN    General                 (kmer_coverage_model.cpp   : 328)   Valley value was estimated improperly, reset to 2
+======= Warnings saved to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_5000_spades/warnings.log

@@ -1,0 +1,6 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:04.465     1M / 388M  WARN    General                 (kmer_coverage_model.cpp   : 219)   Too many erroneous kmers, the estimates might be unreliable
+ * 0:00:04.670     1M / 388M  WARN    General                 (kmer_coverage_model.cpp   : 328)   Valley value was estimated improperly, reset to 3
+ * 0:00:04.683     1M / 388M  WARN    General                 (simplification.cpp        : 517)   The determined erroneous connection coverage threshold may be determined improperly
+======= Warnings saved to /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB20myaHigh_fin_25000_spades/warnings.log

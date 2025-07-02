@@ -1,0 +1,37 @@
+Command line: /home/bfj994/miniconda3/envs/denovo/bin/spades.py	-s	/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_25000.fq.gz	-o	/maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_25000_spades	-k21	
+
+System information:
+  SPAdes version: 4.2.0
+  Python version: 3.13.3
+  OS: Linux-4.18.0-553.40.1.el8_10.x86_64-x86_64-with-glibc2.28
+
+Output dir: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_25000_spades
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: single
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/projects/wintherpedersen/people/bfj994/keelime/data/PB10myaHigh_fin_25000.fq.gz']
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: [21]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+  Assembly graph output will use GFA v1.2 format
+Other parameters:
+  Dir for temp files: /maps/projects/wintherpedersen/people/bfj994/keelime/sim/PB10myaHigh_fin_25000_spades/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
